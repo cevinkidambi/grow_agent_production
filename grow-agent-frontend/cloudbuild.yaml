@@ -1,0 +1,12 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [
+      'build',
+      '--build-arg', 'NEXT_PUBLIC_BACKEND_BASE_URL=${_BACKEND_URL}',
+      '-t', 'gcr.io/trading-agent-480801/grow-agent-frontend',
+      '.'
+    ]
+images:
+  - 'gcr.io/trading-agent-480801/grow-agent-frontend'
+substitutions:
+  _BACKEND_URL: 'http://localhost:8080'

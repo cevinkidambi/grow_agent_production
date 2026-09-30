@@ -1,0 +1,9 @@
+.git/
+.gitignore
+README.md
+grow-agent-frontend/
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+.env
